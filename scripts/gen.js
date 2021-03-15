@@ -17,6 +17,7 @@ function createGenesisBlock(options) {
 
   const tx = new TX({
     version: 1,
+    time: options.time,
     inputs: [{
       prevout: {
         hash: consensus.ZERO_HASH,
@@ -29,7 +30,7 @@ function createGenesisBlock(options) {
         .compile(),
       sequence: 0xffffffff
     }],
-    outputs: [{value: 0, script: null}],
+    outputs: [{value: 0, script: new Script()}],
     locktime: 0
   });
 
