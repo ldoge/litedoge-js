@@ -1,6 +1,6 @@
 {
-  "name": "bcoin",
-  "version": "2.1.2",
+  "name": "ldogejs",
+  "version": "0.1",
   "description": "Bitcoin bike-shed",
   "license": "MIT",
   "repository": "git://github.com/bcoin-org/bcoin.git",
