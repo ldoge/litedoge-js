@@ -91,11 +91,11 @@ common.testdir = function(name) {
   assert(/^[a-z]+$/.test(name), 'Invalid name');
 
   const uniq = randomBytes(4).toString('hex');
-  return path.join(tmpdir(), `bcoin-test-${name}-${uniq}`);
+  return path.join(tmpdir(), `ldogejs-test-${name}-${uniq}`);
 };
 
 common.rimraf = async function(p) {
-  const allowed = /bcoin\-test\-[a-z]+\-[a-f0-9]{8}((\\|\/)[a-z]+)?$/;
+  const allowed = /ldogejs\-test\-[a-z]+\-[a-f0-9]{8}((\\|\/)[a-z]+)?$/;
   if (!allowed.test(p))
     throw new Error(`Path not allowed: ${p}.`);
 

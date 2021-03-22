@@ -1,7 +1,7 @@
 {
   "name": "ldogejs",
   "version": "0.1",
-  "description": "Bitcoin bike-shed",
+  "description": "ldogejs",
   "license": "MIT",
   "repository": "git://github.com/bcoin-org/bcoin.git",
   "homepage": "https://github.com/bcoin-org/bcoin",
@@ -13,7 +13,6 @@
     "Christopher Jeffrey <chjjeffrey@gmail.com>"
   ],
   "keywords": [
-    "bcoin",
     "litedoge",
     "blockchain",
     "cryptocurrency",
@@ -85,18 +84,18 @@
   "devDependencies": {
     "bmocha": "git+https://github.com/bcoin-org/bmocha.git#semver:=2.1.5"
   },
-  "main": "./lib/bcoin.js",
+  "main": "./lib/ldogejs.js",
   "bin": {
-    "bcoin": "./bin/bcoin",
-    "bcoin-node": "./bin/node",
-    "bcoin-spvnode": "./bin/spvnode",
+    "ldogejs": "./bin/ldogejs",
+    "ldogejs-node": "./bin/node",
+    "ldogejs-spvnode": "./bin/spvnode",
+    "ldogejs-cli": "bin/ldogejs-cli",
     "bwallet": "./bin/bwallet",
-    "bcoin-cli": "./bin/bcoin-cli",
     "bwallet-cli": "./bin/bwallet-cli"
   },
   "scripts": {
-    "browserify": "browserify -s bcoin lib/bcoin-browser.js | uglifyjs -c > bcoin.js",
-    "clean": "rm -f {browser/,}{bcoin.js,bcoin-worker.js,app.js,worker.js}",
+    "browserify": "browserify -s ldogejs lib/ldogejs-browser.js | uglifyjs -c > ldogejs.js",
+    "clean": "rm -f {browser/,}{ldogejs.js,ldogejs-worker.js,app.js,worker.js}",
     "docs": "jsdoc -c jsdoc.json",
     "lint": "eslint $(cat .eslintfiles) || exit 0",
     "lint-ci": "eslint $(cat .eslintfiles)",

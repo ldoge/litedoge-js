@@ -1,4 +1,4 @@
-name: bcoin
+name: ldogejs
 version: git
 summary: A fullnode Bitcoin implementation for miners, wallets, and exchanges
 description: |
@@ -10,7 +10,7 @@ confinement: strict
 
 apps:
   bcoin:
-    command: bcoin
+    command: ldogejs
     plugs: [network, network-bind]
 
 parts:

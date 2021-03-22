@@ -256,6 +256,6 @@ async function unstate() {
 })().then(() => {
   console.log('Migration complete.');
   console.log('Rescan is required...');
-  console.log('Start bcoin with `--start-height=[wallet-creation-height]`.');
+  console.log('Start ldogejs with `--start-height=[wallet-creation-height]`.');
   process.exit(0);
 });

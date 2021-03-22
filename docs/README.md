@@ -10,13 +10,13 @@
 
 ## External links
 
-- [Guides](https://bcoin.io/guides.html)
-- [Running in the browser](https://bcoin.io/guides/browser.html)
-- [Node and wallet REST and RPC API](https://bcoin.io/api-docs/index.html)
+- [Guides](https://ldogejs.io/guides.html)
+- [Running in the browser](https://ldogejs.io/guides/browser.html)
+- [Node and wallet REST and RPC API](https://ldogejs.io/api-docs/index.html)
 
 ## Library examples
 
-These code examples are designed to demonstrate how to integrate bcoin modules
+These code examples are designed to demonstrate how to integrate ldogejs modules
 with minimal configuration.
 
 - [Simple fullnode](examples/fullnode.js) - Creates a `FullNode` object and
@@ -33,7 +33,7 @@ with minimal configuration.
 - [SPV sync](examples/spv-sync-wallet.js) - A transaction matching the SPV
   node's bloom filter is broadcast by a minimal full node to the SPV node.
 - [Plugin example](examples/peers-plugin.js) - Demonstrates the `plugin`
-  feature of bcoin's `node` object.
+  feature of ldogejs's `node` object.
 - [Client API usage](examples/client-api.js) - Demonstrates usage of the node
   and wallet API.
 - [Create and sign TX](examples/create-sign-tx.js) - Demonstrates how to use

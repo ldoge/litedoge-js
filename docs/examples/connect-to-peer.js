@@ -3,7 +3,7 @@
 /*
  * Usage:
  *  Run another Bitcoin node on local regtest network, for example
- *    $ ../../bin/bcoin --network=regtest
+ *    $ ../../bin/ldogejs --network=regtest
  *  Execute this script with the other node's address and port
  *    $ node connect-to-peer.js 127.0.0.1:48444
  */

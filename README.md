@@ -9,15 +9,15 @@ JavaScript and C/C++ for Node.js.
 - Wallet Backend
 - General Purpose Bitcoin Library
 
-Try it in the browser: [https://bcoin.io/browser/](https://bcoin.io/browser/)
+Try it in the browser: [https://ldogejs.io/browser/](https://ldogejs.io/browser/)
 
 ## Install
 
 ```
-$ git clone git://github.com/bcoin-org/bcoin.git
-$ cd bcoin
+$ git clone git://github.com/ldogejs-org/ldogejs.git
+$ cd ldogejs
 $ npm rebuild
-$ ./bin/bcoin
+$ ./bin/ldogejs
 ```
 
 See the [Getting started][guide] guide for more in-depth installation
@@ -27,12 +27,12 @@ latest changes via the [Changelog][changelog].
 ## Documentation
 
 - General docs: [docs/](docs/README.md)
-- Wallet and node API docs: https://bcoin.io/api-docs/
-- Library API docs: https://bcoin.io/docs/
+- Wallet and node API docs: https://ldogejs.io/api-docs/
+- Library API docs: https://ldogejs.io/docs/
 
 ## Support
 
-Join us on [freenode][freenode] in the [#bcoin][irc] channel.
+Join us on [freenode][freenode] in the [#ldogejs][irc] channel.
 
 ## Disclaimer
 

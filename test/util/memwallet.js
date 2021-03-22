@@ -1,5 +1,5 @@
 /*!
- * memwallet.js - in-memory wallet object for bcoin
+ * memwallet.js - in-memory wallet object for ldogejs
  * Copyright (c) 2014-2016, Christopher Jeffrey (MIT License).
  * https://github.com/bcoin-org/bcoin
  */

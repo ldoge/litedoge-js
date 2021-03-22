@@ -11,7 +11,7 @@ node_modules/
 package-lock.json
 npm-debug.log
 webpack.*.js
-browser/bcoin*
+browser/ldogejs*
 bench/
 build/
 docs/

@@ -34,7 +34,7 @@ class CLI {
       env: true
     });
 
-    this.config.open('bcoin.conf');
+    this.config.open('ldogejs.conf');
 
     this.argv = this.config.argv;
     this.network = this.config.str('network', 'main');
@@ -268,7 +268,7 @@ class CLI {
         this.log('  $ fee [target]: Estimate smart fee.');
         this.log('  $ reset [height/hash]: Reset chain to desired block.');
         this.log('  $ rpc [command] [args]: Execute RPC command.' +
-          ' (`bcoin-cli rpc help` for more)');
+          ' (`ldogejs-cli rpc help` for more)');
         break;
     }
   }

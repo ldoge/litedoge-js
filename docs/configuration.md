@@ -1,21 +1,21 @@
 # Configuration
 
-By default, the mainnet bcoin config files will reside in `~/.bcoin/bcoin.conf`
-and `~/.bcoin/wallet.conf`. Any parameter passed to bcoin at startup will have
-precedence over the config file. Even if you are just running `bcoin-cli` or
+By default, the mainnet ldogejs config files will reside in `~/.ldogejs/ldogejs.conf`
+and `~/.ldogejs/wallet.conf`. Any parameter passed to ldogejs at startup will have
+precedence over the config file. Even if you are just running `ldogejs-cli` or
 `bwallet-cli` (to access a remote server, for example) the configuration
-files would still reside in `~/.bcoin/`
+files would still reside in `~/.ldogejs/`
 
 For example:
 
 ``` bash
-bcoin --network=regtest --api-key=menace --daemon
+ldogejs --network=regtest --api-key=menace --daemon
 ```
 
-...will read the config file at `~/.bcoin/regtest/bcoin.conf` and ignore any
+...will read the config file at `~/.ldogejs/regtest/ldogejs.conf` and ignore any
 `network` or `api-key` parameters listed in that file.
 
-All bcoin configuration options work in the config file, CLI arguments,
+All ldogejs configuration options work in the config file, CLI arguments,
 process environment, and in the constructor parameters when instantiating
 new `node` objects in JavaScript. Each method has slightly different
 formatting. Note specifically the usage of hyphens and capital letters.
@@ -35,7 +35,7 @@ Bcoin's data directory is determined by the `prefix` option.
 Example:
 
 ``` bash
-$ bcoin --prefix ~/.bcoin_spv --spv
+$ ldogejs --prefix ~/.bcoin_spv --spv
 ```
 
 Will create a datadir of `~/.bcoin_spv`, containing a chain database, wallet
@@ -58,7 +58,7 @@ database and log file.
 ## Node options
 
 - `prefix`: The data directory (stores databases, logs, and configs)
-  (default=~/.bcoin).
+  (default=~/.ldogejs).
 - `db`: Which database backend to use (default=leveldb).
 - `max-files`: Max open files for leveldb. Higher generally means more disk
   page cache benefits, but also more memory usage (default: 64).
@@ -66,10 +66,10 @@ database and log file.
   (default: 32mb).
 - `spv`: Enable Simplified Payments Verification (SPV) mode
 
-*Note: The `spv` and `daemon` options can not be entered in `bcoin.conf`.
+*Note: The `spv` and `daemon` options can not be entered in `ldogejs.conf`.
 They will only work when passed as a launch argument:*
 ```
-bcoin --spv --daemon
+ldogejs --spv --daemon
 ```
 
 ## Logger options
@@ -118,7 +118,7 @@ database and must be passed in consistently.
 
 ## Miner options
 
-- `coinbase-flags`: Coinbase flags (default: mined by bcoin).
+- `coinbase-flags`: Coinbase flags (default: mined by ldogejs).
 - `coinbase-address`: List of payout addresses, randomly selected during block
   creation (comma-separated).
 - `max-block-weight`: Max block weight to mine (default: 4000000).
@@ -145,21 +145,21 @@ If enabled you should also enable `wallet-auth` and set `api-key`.
 
 These options must be saved in `wallet.conf`. They can also be passed as
 environment variables or command-line variables if they are preceeded with
-a `wallet-` prefix. (See [CHANGELOG.md](https://github.com/bcoin-org/bcoin/blob/master/CHANGELOG.md#configuration-changes))
+a `wallet-` prefix. (See [CHANGELOG.md](https://github.com/ldogejs-org/ldogejs/blob/master/CHANGELOG.md#configuration-changes))
 
-For example, to run a bcoin and wallet node on a remote server that you can
-access from a local machine, you would launch bcoin with the command:
+For example, to run a ldogejs and wallet node on a remote server that you can
+access from a local machine, you would launch ldogejs with the command:
 
-`bcoin --network=testnet --http-host=0.0.0.0 --wallet-http-host=0.0.0.0
+`ldogejs --network=testnet --http-host=0.0.0.0 --wallet-http-host=0.0.0.0
 --wallet-api-key=hunter2 --wallet-wallet-auth=true`
 
 ### Bcoin client:
 
-- `node-host`: Location of bcoin node HTTP server (default: localhost).
-- `node-port`: Port of bcoin node HTTP server (defaults to RPC port
+- `node-host`: Location of ldogejs node HTTP server (default: localhost).
+- `node-port`: Port of ldogejs node HTTP server (defaults to RPC port
   of network).
 - `node-ssl`: Whether to use SSL (default: false).
-- `node-api-key`: API-key for bcoin HTTP server.
+- `node-api-key`: API-key for ldogejs HTTP server.
 
 ### Wallet database:
 
@@ -180,9 +180,9 @@ access from a local machine, you would launch bcoin with the command:
 - `no-auth`: Disable auth for API server and wallets (default: false).
 - `wallet-auth`: Enable token auth for wallets (default: false).
 - `admin-token`: Token required if `wallet-auth` is enabled: restricts access
-  to [all wallet admin routes.](https://bcoin.io/api-docs/#wallet-admin-commands)
+  to [all wallet admin routes.](https://ldogejs.io/api-docs/#wallet-admin-commands)
 
 ## Sample config files
 
-- Node https://github.com/bcoin-org/bcoin/blob/master/etc/sample.conf
-- Wallet https://github.com/bcoin-org/bcoin/blob/master/etc/sample.wallet.conf
+- Node https://github.com/ldogejs-org/ldogejs/blob/master/etc/sample.conf
+- Wallet https://github.com/ldogejs-org/ldogejs/blob/master/etc/sample.wallet.conf

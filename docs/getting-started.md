@@ -36,8 +36,8 @@ gpg --recv-keys "<fingerprint>"
 ### Installing via Git
 
 ``` bash
-$ git clone git://github.com/bcoin-org/bcoin.git
-$ cd bcoin
+$ git clone git://github.com/ldogejs-org/ldogejs.git
+$ cd ldogejs
 ```
 
 To verify and checkout a specific release:
@@ -73,22 +73,22 @@ again if any dependencies with native addons have been updated.
 To support signature verification, you can use [`gpk`][gpk] to replace the
 use of `npm`.
 
-To install `bcoin` globally and to your path:
+To install `ldogejs` globally and to your path:
 ```
-$ gpk install --global https://github.com/bcoin-org/bcoin
+$ gpk install --global https://github.com/ldogejs-org/ldogejs
 ```
 
-To install `bcoin` as a dependency, you can create a new
+To install `ldogejs` as a dependency, you can create a new
 `package.json` with:
 ```
 $ gpk init
 ```
 
-And then add `bcoin` with:
+And then add `ldogejs` with:
 ```
-$ gpk install https://github.com/bcoin-org/bcoin
+$ gpk install https://github.com/ldogejs-org/ldogejs
 ```
-The latest tagged version will be added to `package.json` and bcoin
+The latest tagged version will be added to `package.json` and ldogejs
 will be installed.
 
 See [GPK documentation][gpk] for further details on usage.
@@ -102,7 +102,7 @@ apt-get install build-essential python
 
 ### Installing via Docker
 
-Check [bcoin-docker](https://github.com/bcoin-org/bcoin-docker)
+Check [ldogejs-docker](https://github.com/ldogejs-org/ldogejs-docker)
 
 ### Installing on Windows
 
@@ -115,14 +115,14 @@ as well as `gpg` via the Git bash shell.
 
 ## Use as a dependency
 
-It is recommended to specify bcoin as a git dependency with semantic
+It is recommended to specify ldogejs as a git dependency with semantic
 versioning and include a mirror in the git tree for integrity and
 availability. For example, here is an example `package.json`:
 
 ```json
 {
   "dependencies": {
-    "bcoin": "git+https://github.com/bcoin-org/bcoin.git#semver:~2.0.0"
+    "ldogejs": "git+https://github.com/ldogejs-org/ldogejs.git#semver:~2.0.0"
   }
 }
 ```
@@ -130,27 +130,27 @@ availability. For example, here is an example `package.json`:
 While git tags are signed, `npm` will not check the signature
 of the git tag. You can use [`gpk`][gpk] instead.
 
-## Starting up your first bcoin node
+## Starting up your first ldogejs node
 
-If bcoin is installed globally, `$ bcoin` should be in your PATH. If not,
-the bcoin bootstrap script resides in `/path/to/bcoin/bin/bcoin`.
+If ldogejs is installed globally, `$ ldogejs` should be in your PATH. If not,
+the ldogejs bootstrap script resides in `/path/to/ldogejs/bin/ldogejs`.
 
 ``` bash
-$ bcoin
+$ ldogejs
 ```
 
-Will run a bcoin node as the foreground process, displaying all debug logs.
+Will run a ldogejs node as the foreground process, displaying all debug logs.
 
 To run as a daemon:
 
 ``` bash
-$ bcoin --daemon
+$ ldogejs --daemon
 ```
 
 This will start up a full node, complete with: a blockchain, mempool, miner,
 p2p server, wallet server, and an HTTP REST+RPC server.
 
-All logs will be written to `~/.bcoin/debug.log` by default.
+All logs will be written to `~/.ldogejs/debug.log` by default.
 
 By default, the http server will only listen on `127.0.0.1:8332`. No auth
 will be required if an API key was not passed in. If you listen on any other
@@ -175,7 +175,7 @@ the user. An API key can be chosen with the `--api-key` option.
 Example:
 
 ``` bash
-$ bcoin --http-host=0.0.0.0 --api-key hunter2 --daemon
+$ ldogejs --http-host=0.0.0.0 --api-key hunter2 --daemon
 ```
 
 API keys are used with HTTP Basic Auth:
@@ -184,12 +184,12 @@ API keys are used with HTTP Basic Auth:
 $ curl http://x:hunter2@localhost:8332/
 ```
 
-If bcoin is installed globally, both `bcoin-cli` and `bwallet-cli` should be
+If ldogejs is installed globally, both `ldogejs-cli` and `bwallet-cli` should be
 on your path.
 
 ``` bash
-$ bcoin-cli info --api-key hunter2
-$ bcoin-cli rpc getblockchaininfo --api-key hunter2
+$ ldogejs-cli info --api-key hunter2
+$ ldogejs-cli rpc getblockchaininfo --api-key hunter2
 $ bwallet-cli balance
 ```
 
@@ -198,15 +198,15 @@ $ bwallet-cli balance
 Bcoin has native support for SOCKS proxies, and will accept a `--proxy` option
 in the format of `--proxy=[user]:[pass]@host:port`.
 
-Passing the `--onion` option tells bcoin that the SOCKS proxy is a Tor socks
+Passing the `--onion` option tells ldogejs that the SOCKS proxy is a Tor socks
 proxy, and will enable Tor resolution for DNS lookups, as well as try to
 connect to `.onion` addresses found on the P2P network.
 
 ``` bash
-$ bcoin --proxy joe:hunter2@127.0.0.1:9050 --onion
+$ ldogejs --proxy joe:hunter2@127.0.0.1:9050 --onion
 ```
 
-### Running bcoin as a Tor hidden service
+### Running ldogejs as a Tor hidden service
 
 Your hidden service must first be configured with `tor`. Once you have the
 `.onion` address, it can be passed into `--public-host` in the form
@@ -221,32 +221,32 @@ It's often desirable to run behind several trusted bitcoin nodes. To select
 permanent nodes to connect to, the `--nodes` option is available:
 
 ``` bash
-$ bcoin --nodes foo.example.com:8333,1.2.3.4:8333,5.6.7.8:8333
+$ ldogejs --nodes foo.example.com:8333,1.2.3.4:8333,5.6.7.8:8333
 ```
 
-If chosen, bcoin will _always_ try to connect to these nodes as outbound
+If chosen, ldogejs will _always_ try to connect to these nodes as outbound
 peers. They are top priority and whitelisted (not susceptible to permanent
 bans, only disconnections).
 
 To _only_ connect to these nodes, use `--only`
 
 ``` bash
-$ bcoin --only foo.example.com,1.2.3.4,5.6.7.8
+$ ldogejs --only foo.example.com,1.2.3.4,5.6.7.8
 ```
 
 ## Disabling listening
 
 To avoid accepting connections on the P2P network altogether,
-`--listen=false` can be passed to bcoin.
+`--listen=false` can be passed to ldogejs.
 
 ### Selfish mode
 
-Bcoin also supports a "selfish" mode. In this mode, bcoin still has full
+Bcoin also supports a "selfish" mode. In this mode, ldogejs still has full
 blockchain and mempool validation, but network services are disabled: it
 will not relay transactions or serve blocks to anyone.
 
 ``` bash
-$ bcoin --selfish --listen=false
+$ ldogejs --selfish --listen=false
 ```
 
 Note: Selfish mode is not recommended. We encourage you to _help_ the network

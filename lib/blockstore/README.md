@@ -1,6 +1,6 @@
 # BlockStore
 
-BlockStore `lib/blockstore` is a bcoin module intended to be used as a backend
+BlockStore `lib/blockstore` is a ldogejs module intended to be used as a backend
 for storing block and undo coin data.  It includes a backend that uses flat
 files for storage.  Its key benefit is performance improvements across the
 board in disk I/O, which is the major bottleneck for the initial block sync.

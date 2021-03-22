@@ -1,5 +1,5 @@
 /*!
- * proxysocket.js - wsproxy socket for bcoin
+ * proxysocket.js - wsproxy socket for ldogejs
  * Copyright (c) 2016-2017, Christopher Jeffrey (MIT License).
  * https://github.com/bcoin-org/bcoin
  */

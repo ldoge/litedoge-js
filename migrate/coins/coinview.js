@@ -1,5 +1,5 @@
 /*!
- * coinview.js - coin viewpoint object for bcoin
+ * coinview.js - coin viewpoint object for ldogejs
  * Copyright (c) 2014-2017, Christopher Jeffrey (MIT License).
  * https://github.com/bcoin-org/bcoin
  */

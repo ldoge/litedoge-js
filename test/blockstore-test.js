@@ -294,9 +294,9 @@ describe('BlockStore', function() {
     const location = () => {
       switch (process.platform) {
         case 'win32':
-          return '\\tmp\\.bcoin\\blocks\\';
+          return '\\tmp\\.ldogejs\\blocks\\';
         default:
-          return '/tmp/.bcoin/blocks/';
+          return '/tmp/.ldogejs/blocks/';
       }
     };
 
@@ -332,7 +332,7 @@ describe('BlockStore', function() {
 
         try {
           new FileBlockStore({
-            location: 'tmp/.bcoin/blocks',
+            location: 'tmp/.ldogejs/blocks',
             maxFileLength: 1024
           });
         } catch (e) {

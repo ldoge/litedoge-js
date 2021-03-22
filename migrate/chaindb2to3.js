@@ -107,7 +107,7 @@ async function updateVersion() {
     throw Error(`DB is version ${version}.`);
 
   // Set to uint32_max temporarily.
-  // This is to prevent bcoin from
+  // This is to prevent ldogejs from
   // trying to access this chain.
   const data = Buffer.allocUnsafe(4);
   data.writeUInt32LE(-1 >>> 0, 0, true);

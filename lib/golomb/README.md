@@ -1,6 +1,6 @@
 # Golomb
 
-Golomb `lib/golomb` is a bcoin module intended to be used as a Golomb Coded Set
+Golomb `lib/golomb` is a ldogejs module intended to be used as a Golomb Coded Set
 for creating Compact Block Filters as specified in [BIP 158][0].  It is used to
 create block filters which can be used to quickly scan blocks for a given set
 of transaction outputs.

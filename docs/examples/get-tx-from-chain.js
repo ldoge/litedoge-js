@@ -8,7 +8,7 @@ const fs = require('bfile');
 // set `memory: false`.
 const blocks = bcoin.blockstore.create({
   memory: true,
-  prefix: '/tmp/bcoin-testnet-example'
+  prefix: '/tmp/ldogejs-testnet-example'
 });
 
 const chain = new bcoin.Chain({

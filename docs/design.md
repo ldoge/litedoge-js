@@ -20,8 +20,8 @@ http client -> tx -> http server -> mempool
 ```
 
 Not only does the loose coupling make testing easier, it ensures people can
-utilize bcoin for many use cases. Learn more about specific events and
-event emitters at https://bcoin.io/guides/events.html
+utilize ldogejs for many use cases. Learn more about specific events and
+event emitters at https://ldogejs.io/guides/events.html
 
 ## Performance
 
@@ -55,14 +55,14 @@ Bcoin uses [secp256k1-node][secp256k1-node] for ECDSA verification, which is a
 node.js binding to Pieter Wuille's blazingly fast [libsecp256k1][libsecp256k1]
 library.
 
-In the browser, bcoin will use [elliptic][elliptic], the fastest JavaScript
+In the browser, ldogejs will use [elliptic][elliptic], the fastest JavaScript
 ECDSA implementation. It will obviously never beat C and hand-optimized
 assembly, but it's still usable.
 
 ### Benefits
 
 The real feature of JavaScript is that your code will run almost anywhere. With
-bcoin, we now have a full node that will run on almost any browser, on laptops,
+ldogejs, we now have a full node that will run on almost any browser, on laptops,
 on servers, on smartphones, on most devices you can imagine, even by simply
 visiting a webpage.
 

@@ -8,8 +8,8 @@ const {resolve} = require('path');
 const {argv} = process;
 
 if (argv.length < 3) {
-  console.error('Usage: $ ./migrate/latest [bcoin-prefix]');
-  console.error('Example: $ ./migrate/latest ~/.bcoin');
+  console.error('Usage: $ ./migrate/latest [ldogejs-prefix]');
+  console.error('Example: $ ./migrate/latest ~/.ldogejs');
   process.exit(1);
   return;
 }

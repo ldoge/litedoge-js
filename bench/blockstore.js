@@ -1,5 +1,5 @@
 /*!
- * bench/blockstore.js - benchmark blockstore for bcoin
+ * bench/blockstore.js - benchmark blockstore for ldogejs
  *
  * This can be run to benchmark the performance of the blockstore
  * module for writing, reading and pruning block data. Results are
@@ -53,7 +53,7 @@ const config = {
   'location': {
     value: true,
     valid: a => isAbsolute(a),
-    fallback: '/tmp/bcoin-bench-blockstore'
+    fallback: '/tmp/ldogejs-bench-blockstore'
   },
   'store': {
     value: true,
