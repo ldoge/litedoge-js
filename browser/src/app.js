@@ -237,9 +237,7 @@ async function _formatWallet(wallet) {
   const {key, mnemonic} = wallet.master.toJSON(node.network, true);
   const account = await wallet.getAccount('default');
   const receive = account.receiveAddress();
-  const nested = account.nestedAddress();
   const raddr = receive.toString(node.network);
-  const naddr = nested ? nested.toString(node.network) : null;
 
   let html = '';
 
@@ -247,7 +245,6 @@ async function _formatWallet(wallet) {
 
   if (naddr) {
     html += `Current Address (p2wpkh): <b>${raddr}</b><br>`;
-    html += `Current Address (p2wpkh behind p2sh): <b>${naddr}</b><br>`;
   } else {
     html += `Current Address: <b>${raddr}</b><br>`;
   }
