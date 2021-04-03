@@ -296,6 +296,20 @@ CoinView.prototype.isCoinbase = function isCoinbase(input) {
 };
 
 /**
+ * Get coins coinstake flag by input
+ * @param {Input} input
+ * @returns {boolean|Boolean|*|boolean}
+ */
+CoinView.prototype.isCoinstake = function isCoinbase(input) {
+  const coins = this.get(input.prevout.hash);
+
+  if (!coins)
+    return false;
+
+  return coins.coinstake;
+};
+
+/**
  * Retrieve coins from database.
  * @method
  * @param {ChainDB} db
