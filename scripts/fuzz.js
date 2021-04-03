@@ -65,7 +65,7 @@ function randomKey() {
 }
 
 function randomOutpoint() {
-  const hash = random.randomBytes(32).toString('hex');
+  const hash = random.randomBytes(32);
   return new Outpoint(hash, rand(0, 0xffffffff));
 }
 
@@ -79,7 +79,7 @@ function randomInput() {
 }
 
 function randomOutput() {
-  return Output.fromScript(randomScript(), rand(0, 1e8));
+  return Output.fromScript(randomScript(), randBI(0n, BigInt(1e8)));
 }
 
 function randomTX() {
@@ -153,18 +153,6 @@ function randomPubkeyhash() {
   return Script.fromPubkeyhash(random.randomBytes(20));
 }
 
-function randomMultisig() {
-  const n = rand(1, 16);
-  const m = rand(1, n);
-  const keys = [];
-
-  for (let i = 0; i < n; i++) {
-    const len = rand(0, 2) === 0 ? 33 : 65;
-    keys.push(random.randomBytes(len));
-  }
-
-  return Script.fromMultisig(m, n, keys);
-}
 
 function randomScripthash() {
   return Script.fromScripthash(random.randomBytes(20));
@@ -178,21 +166,17 @@ function randomRedeem() {
       return randomPubkey();
     case 1:
       return randomPubkeyhash();
-    case 2:
-      return randomMultisig();
   }
   throw new Error();
 }
 
 function randomScript() {
-  switch (rand(0, 7)) {
+  switch (rand(0, 2)) {
     case 0:
       return randomPubkey();
     case 1:
       return randomPubkeyhash();
     case 2:
-      return randomMultisig();
-    case 3:
       return randomScripthash();
   }
   throw new Error();
@@ -252,7 +236,7 @@ function fuzzSimple(flags) {
     const input = randomInputScript();
 
     try {
-      input.execute(stack, flags, tx, 0, 0, 0);
+      input.execute(stack, flags, tx, 0, 0n, 0);
     } catch (e) {
       if (e.type === 'ScriptError')
         continue;
@@ -262,7 +246,7 @@ function fuzzSimple(flags) {
     const output = randomOutputScript();
 
     try {
-      output.execute(stack, flags, tx, 0, 0, 0);
+      output.execute(stack, flags, tx, 0, 0n, 0);
     } catch (e) {
       if (e.type === 'ScriptError')
         continue;
@@ -317,7 +301,7 @@ function fuzzVerify(flags) {
         output,
         tx,
         0,
-        0,
+        0n,
         flags
       );
     } catch (e) {
@@ -424,6 +408,11 @@ function main() {
 
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
+function randBI(min, max) {
+  return BigInt(Math.floor(Math.random() * (Number(max) - Number(min)))) + min;
 }
 
 randomKey;

@@ -30,7 +30,7 @@ function createGenesisBlock(options) {
         .compile(),
       sequence: 0xffffffff
     }],
-    outputs: [{value: 0, script: new Script()}],
+    outputs: [{value: 0n, script: new Script()}],
     locktime: 0
   });
 
