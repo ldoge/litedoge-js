@@ -2159,7 +2159,7 @@
     2151) should handle script test with cache:BIP66-compliant but not NULLFAIL-compliant (NULLFAIL)
     2152) should handle script test without cache:BIP66-compliant but not NULLFAIL-compliant (NULLFAIL)
 
-  6 passing (504ms)
+  6 passing (246ms)
   2152 failing
 
   1) Script

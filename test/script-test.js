@@ -36,9 +36,9 @@ function parseScriptTest(data) {
 
   comments += ` (${expected})`;
 
-  let value = 0;
+  let value = 0n;
   if (witArr.length > 0)
-    value = fromFloat(witArr.pop(), 8);
+    value = BigInt(fromFloat(witArr.pop(), 8));
 
   const input = Script.fromString(inpHex);
   const output = Script.fromString(outHex);
