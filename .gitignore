@@ -8,6 +8,5 @@ browser/ldogejs*
 npm-debug.log
 coverage/
 yarn.lock
-package-lock.json
 webpack.*.js
 .idea/
