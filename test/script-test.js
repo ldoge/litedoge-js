@@ -281,6 +281,7 @@ describe('Script', function() {
         // Funding transaction.
         const prev = new TX({
           version: 1,
+          time: 0,
           inputs: [{
             prevout: {
               hash: consensus.ZERO_HASH,
@@ -302,6 +303,7 @@ describe('Script', function() {
         // Spending transaction.
         const tx = new TX({
           version: 1,
+          time: 0,
           inputs: [{
             prevout: {
               hash: prev.hash(),
