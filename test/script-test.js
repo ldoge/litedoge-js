@@ -278,6 +278,7 @@ describe('Script', function() {
       const suffix = noCache ? 'without cache' : 'with cache';
 
       it(`should handle script test ${suffix}:${comments}`, () => {
+        console.log(comments);
         // Funding transaction.
         const prev = new TX({
           version: 1,
