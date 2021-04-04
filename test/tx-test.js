@@ -310,7 +310,7 @@ describe('TX', function() {
 
       it(`should get sighash of ${hash} (${hex}) ${suffix}`, () => {
         const subscript = script.getSubscript(0).removeSeparators();
-        const hash = tx.signatureHash(index, subscript, 0, type, 0);
+        const hash = tx.signatureHash(index, subscript,  type, 0);
         assert.bufferEqual(hash, expected);
       });
     }
