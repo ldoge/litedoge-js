@@ -7,10 +7,7 @@ const NodeClient = require('../lib/client/node');
 const Amount = require('../lib/btc/amount');
 
 const ports = {
-  main: 8080,
-  testnet: 18332,
-  regtest: 48332,
-  simnet: 18556
+  main: 17015,
 };
 
 class CLI {
