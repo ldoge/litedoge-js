@@ -31,7 +31,7 @@
     "bfile": "git+https://github.com/bcoin-org/bfile.git#semver:~0.2.1",
     "bfilter": "git+https://github.com/bcoin-org/bfilter.git#semver:~2.1.0",
     "bheep": "git+https://github.com/bcoin-org/bheep.git#semver:~0.1.5",
-    "binet": "git+https://github.com/bcoin-org/binet.git#semver:~0.3.5",
+    "binet": "git+https://github.com/bcoin-org/binet.git#semver:~0.3.6",
     "blgr": "git+https://github.com/bcoin-org/blgr.git#semver:~0.1.8",
     "blru": "git+https://github.com/bcoin-org/blru.git#semver:~0.1.6",
     "blst": "git+https://github.com/bcoin-org/blst.git#semver:~0.1.5",
