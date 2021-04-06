@@ -298,9 +298,9 @@ CoinView.prototype.isCoinbase = function isCoinbase(input) {
 /**
  * Get coins coinstake flag by input
  * @param {Input} input
- * @returns {boolean|Boolean|*|boolean}
+ * @returns {Boolean}
  */
-CoinView.prototype.isCoinstake = function isCoinbase(input) {
+CoinView.prototype.isCoinstake = function isCoinstake(input) {
   const coins = this.get(input.prevout.hash);
 
   if (!coins)
