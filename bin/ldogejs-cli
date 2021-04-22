@@ -12,7 +12,7 @@ const ports = {
 
 class CLI {
   constructor() {
-    this.config = new Config('bcoin', {
+    this.config = new Config('ldogejs', {
       suffix: 'network',
       fallback: 'main',
       alias: {
