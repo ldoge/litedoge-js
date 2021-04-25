@@ -78,7 +78,7 @@ describe('RPC', function() {
         'size', 'weight', 'height', 'version',
         'versionHex', 'merkleroot', 'coinbase',
         'tx', 'time', 'mediantime', 'nonce',
-        'bits', 'difficulty', 'chainwork',
+        'bits', 'difficulty', 'chaintrust',
         'nTx', 'previousblockhash', 'nextblockhash'
       ];
 

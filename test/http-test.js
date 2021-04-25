@@ -437,7 +437,7 @@ describe('HTTP', function() {
     const properties = [
       'hash', 'version', 'prevBlock',
       'merkleRoot', 'time', 'bits',
-      'nonce', 'height', 'chainwork'
+      'nonce', 'height', 'chaintrust'
     ];
 
     for (const property of properties)

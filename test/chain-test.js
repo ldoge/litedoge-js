@@ -215,7 +215,7 @@ describe('Chain', function() {
 
     assert(forked);
     assert.bufferEqual(chain.tip.hash, block.hash());
-    assert(chain.tip.chainwork.gt(tip1.chainwork));
+    assert(chain.tip.chaintrust.gt(tip1.chaintrust));
   });
 
   it('should have correct chain value', () => {
@@ -845,7 +845,7 @@ describe('Chain', function() {
     assert(typeof fmt === 'string');
     assert(fmt.includes('hash'));
     assert(fmt.includes('version'));
-    assert(fmt.includes('chainwork'));
+    assert(fmt.includes('chaintrust'));
   });
 
   describe('Checkpoints', function() {

@@ -183,7 +183,7 @@ describe('Node', function() {
 
     assert(forked);
     assert.bufferEqual(chain.tip.hash, block.hash());
-    assert(chain.tip.chainwork.gt(tip1.chainwork));
+    assert(chain.tip.chaintrust.gt(tip1.chaintrust));
   });
 
   it('should have correct chain value', () => {

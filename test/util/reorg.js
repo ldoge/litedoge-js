@@ -57,7 +57,7 @@ async function reorg(chain, cpu, height) {
 
   assert(forked);
   assert.bufferEqual(chain.tip.hash, block.hash());
-  assert(chain.tip.chainwork.gt(tip1.chainwork));
+  assert(chain.tip.chaintrust.gt(tip1.chaintrust));
 }
 
 module.exports = reorg;
