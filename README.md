@@ -13,9 +13,9 @@ JavaScript and C/C++ for Node.js.
 ## Install
 
 ```
-$ git clone git://github.com/ldogejs-org/ldogejs.git
-$ cd ldogejs
-$ npm rebuild
+$ git clone git://github.com/ldoge/litedoge-js.git
+$ cd litedoge-js
+$ npm install
 $ ./bin/ldogejs
 ```
 

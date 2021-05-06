@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "ldogejs",
   "license": "MIT",
-  "repository": "git://github.com/bcoin-org/bcoin.git",
-  "homepage": "https://github.com/bcoin-org/bcoin",
+  "repository": "git://github.com/ldoge/litedoge-js.git",
+  "homepage": "https://github.com/ldoge/litedoge-js",
   "bugs": {
-    "url": "https://github.com/bcoin-org/bcoin/issues"
+    "url": "https://github.com/ldoge/litedoge-js/issues"
   },
   "author": "Fedor Indutny <fedor@indutny.com>",
   "contributors": [
