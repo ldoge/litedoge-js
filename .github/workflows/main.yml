@@ -32,6 +32,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Dry run
-        run: ./bin/ldogejs --selfish --daemon
+        run: ./bin/ldogejs --selfish --daemon --port=17014
       - name: Ping ldoge port
         run: nc -vz 127.0.0.1 17014
