@@ -83,7 +83,7 @@
   ],
   "devDependencies": {
     "bmocha": "git+https://github.com/bcoin-org/bmocha.git#semver:=2.1.5",
-    "mocha": "^8.3.2",
+    "mocha": "^11.1.0",
     "nyc": "^15.1.0"
   },
   "main": "./lib/ldogejs.js",
